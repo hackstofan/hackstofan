@@ -1,3 +1,4 @@
 [submodule "themes/hugo-xmin"]
 	path = themes/hugo-xmin
-	url = https://github.com/yihui/hugo-xmin
+	url = https://github.com/hackstofan/hugo-xmin
+	branch = hackstofa
