@@ -1,4 +1,4 @@
 baseURL = "https://hackstofa.is/"
 languageCode = "en-us"
 title = "Hackstofa Íslands"
-theme = "kube"
+theme = "hugo-xmin"
