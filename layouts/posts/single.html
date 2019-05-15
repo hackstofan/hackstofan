@@ -1,4 +1,7 @@
+{{ define "main" }}
+
 {{ partial "header.html" . }}
+
 <div class="article-meta">
 <h1><span class="title">{{ .Title | markdownify }}</span></h1>
 <p>Made by hagstofa with love</p>
@@ -11,3 +14,5 @@
 </main>
 
 {{ partial "footer.html" . }}
+
+{{end}}

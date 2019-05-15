@@ -1,3 +1,5 @@
+{{ define "main" }}
+
 {{ partial "header.html" . }}
 
 {{if not .IsHome }}
@@ -24,3 +26,5 @@
   {{ end }}
 
 {{ partial "footer.html" . }}
+
+{{end}}
