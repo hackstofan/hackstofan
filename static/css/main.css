@@ -1,0 +1,14 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+nav.main{
+	background: #CCC;
+}
+
+nav.main>img{
+	width: 100px;
+}
