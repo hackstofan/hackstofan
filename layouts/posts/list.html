@@ -1,7 +1,5 @@
 {{ define "main" }}
 
-{{ partial "header.html" . }}
-
 {{if not .IsHome }}
 <h1>{{ .Title | markdownify }}</h1>
 {{ end }}

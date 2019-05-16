@@ -1,0 +1,62 @@
+@import "../node_modules/skeleton-plus/src/style.scss";
+
+// Font awesome styling
+.inline-svg {
+  display: inline-block;
+  height: 1.15rem;
+  width: 1.15rem;
+  top: 0.15rem;
+  position: relative;
+}
+
+// Main navbar
+nav.main{
+	flex-direction: column;
+
+	.brand {
+		display: flex;
+		flex-shrink: 1;
+		align-items: center;
+		justify-content: center;
+		text-align: left;
+
+		img{
+			max-height: 4em;
+		}
+
+		.text h5 {
+			margin: 0;
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-grow: 1;
+		align-items: center;
+		justify-content: center;
+
+		li a {
+			text-decoration: none;
+		}
+	}
+
+	@media screen and (min-width: $smallBreak) {
+		flex-direction: row;
+
+		.links {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: flex-end;
+			margin: 0;
+			text-align: right;
+		}
+	}
+
+	@media screen and (min-width: $mobileBreak) {
+		ul.links {
+			flex-direction: row;
+			justify-content: right;
+			align-items: flex-start;
+		}
+	}
+}
