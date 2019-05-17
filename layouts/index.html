@@ -7,19 +7,19 @@
 {{ .Content }}
 
   {{ range (where .Data.Pages "Section" "!=" "") }}
-	<div class="card mb-3" style="max-width: 540px;">
-	  <div class="row no-gutters">
-	    <div class="col-md-4">
-	      <img src="https://www.placecage.com/300/400" class="card-img" alt="...">
-	    </div>
-	    <div class="col-md-8">
-	      <div class="card-body">
-	        <h5 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h5>
-	        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-	        <p class="card-text"><small class="text-muted">{{ .Date.Format "2006/01/02" }}</small></p>
-	      </div>
-	    </div>
-	  </div>
+  <div class="article-wrapper">
+	<article>
+		<div class="title-parent">
+			<div class="title"><h4 class="date">{{ .Date.Format "2. January" }}</h4><h3>{{ .Title | markdownify }}</h3><h4 class="link"><a href="{{ .RelPermalink }}">Read article</a></h4>
+			</div>
+		</div>
+		<div class="image-parent">
+      {{ $img := (.Resources.ByType "image").GetMatch .Params.featured_image }}
+			{{ with $img.Fill "100x100" }}
+				<div class="image" style="background-image: url({{ .Permalink }})" alt="{{ $.Title }}"></div>
+			{{ end }}
+		</div>
+	</article>
 	</div>
   {{ end }}
 
