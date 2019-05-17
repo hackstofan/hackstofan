@@ -488,8 +488,10 @@ nav.main {
     text-align: left; }
     nav.main .brand img {
       max-height: 4em; }
-    nav.main .brand .text h5 {
+    nav.main .brand .text h4 {
       margin: 0; }
+    nav.main .brand .text > .slogan {
+      font-size: 1em; }
   nav.main ul {
     display: flex;
     flex-grow: 1;
@@ -510,7 +512,8 @@ nav.main {
     nav.main ul.links {
       flex-direction: row;
       justify-content: right;
-      align-items: flex-start; } }
+      align-items: flex-start;
+      font-size: 1.1em; } }
 
 .article-wrapper {
   float: left;
@@ -530,7 +533,7 @@ nav.main {
     width: calc(50% - 0.8em); }
     .article-wrapper.medium:hover {
       height: 10em;
-      width: 50%;
+      width: 49.999%;
       margin: calc(0.8em - 0.4em) 0 -0.4em 0;
       cursor: pointer; }
     .article-wrapper.medium .title-parent {
@@ -541,7 +544,7 @@ nav.main {
           margin-top: 1em;
           font-size: 1.2em; }
         .article-wrapper.medium .title-parent .title .date {
-          font-size: 1em;
+          font-size: e1aaam;
           margin: 0 0 1em 0; }
         .article-wrapper.medium .title-parent .title .link {
           display: none; }
