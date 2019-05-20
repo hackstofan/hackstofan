@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 /*
  Define some variables we will need
@@ -152,12 +153,12 @@ nav {
   margin: 0 .5%;
   float: left; }
 
-@media screen and (max-width: 42em) {
+@media screen and (max-width: 48em) {
   .columns.desktop, .column.desktop {
     display: block !important;
     width: 99% !important; } }
 
-@media screen and (min-width: 42em) {
+@media screen and (min-width: 48em) {
   .columns.mobile, .column.mobile {
     display: block !important;
     width: 99% !important; } }
@@ -292,7 +293,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-top: .5em; }
-  @media screen and (max-width: 42em) {
+  @media screen and (max-width: 48em) {
     table {
       overflow-x: auto;
       display: block; } }
@@ -412,17 +413,18 @@ hr {
 .bg-error-bright {
   background-color: #fbc9c4; }
 
-code {
-  background-color: #e0e0e0;
+/*code {
+  background-color: $mutedColor;
   display: inline-block;
   padding: 4px 8px;
   font-family: monospace;
-  overflow-x: auto; }
+  overflow-x: auto;
+}
 
 pre > code {
   display: block;
-  white-space: pre; }
-
+  white-space: pre;
+}*/
 .cover {
   min-height: 60vh;
   display: flex;
@@ -499,7 +501,7 @@ nav.main {
     justify-content: center; }
     nav.main ul li a {
       text-decoration: none; }
-  @media screen and (min-width: 24em) {
+  @media screen and (min-width: 32em) {
     nav.main {
       flex-direction: row; }
       nav.main .links {
@@ -508,7 +510,7 @@ nav.main {
         align-items: flex-end;
         margin: 0;
         text-align: right; } }
-  @media screen and (min-width: 42em) {
+  @media screen and (min-width: 48em) {
     nav.main ul.links {
       flex-direction: row;
       justify-content: right;
@@ -595,3 +597,42 @@ nav.main {
     .article-wrapper article a {
       color: inherit;
       text-decoration: none; }
+
+blockquote {
+  background: #f2f2f2;
+  border-left: 10px solid #1b75bc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’"; }
+
+blockquote:before {
+  color: #1b75bc;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em; }
+
+blockquote p, h1, h2, h3, h4, h5, h6 {
+  display: inline; }
+
+div.highlight {
+  margin: 1.6em 10px;
+  border-left: 10px solid #1b75bc; }
+  div.highlight pre {
+    font-size: 1em;
+    font-family: monospace; }
+
+/*article.post, article.post * {
+	outline: 1px solid #000;
+}*/
+article.post p {
+  font-size: 1.1em; }
+
+article.post header h1 {
+  font-size: 2.4em; }
+
+article.post p > code {
+  padding: 0.2em 0.4em;
+  border-left: 10px solid #1b75bc;
+  background: #f2f2f2;
+  font-family: monospace; }

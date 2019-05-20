@@ -1,4 +1,4 @@
-@import "../node_modules/skeleton-plus/src/style.scss";
+@import "./src/style.scss";
 
 $transition: cubic-bezier(0.4, 0, 0.2, 1);
 $transition-duration: 0.15s;
@@ -79,8 +79,6 @@ $ext-width: 0.4em;
 	margin: 0.8em 0.4em 0 0.4em;
 	overflow: hidden;
 	transition: all $transition-duration $transition;
-	// transition-delay: 0.1s;
-	// box-shadow: 0px 0px 5px #2d2d2d;
 	
 	&:hover{
 		height: 20em;
@@ -125,10 +123,8 @@ $ext-width: 0.4em;
 		width: calc(100% + 0.8em);
 		top: -0.4em;
 		left: -0.4em;
-		//background-color: #333333;
 		background-color: #f2f2f2;
 		transition: all $transition-duration $transition;
-		// transition-delay: 0.1s;
 		
 		&:hover{
 			top: 0;
@@ -176,5 +172,53 @@ $ext-width: 0.4em;
 		.readmore{ text-align: center; }
 		a { color: inherit; text-decoration: none; }
 	}
+}
 
+blockquote {
+  background: #f2f2f2;
+  border-left: 10px solid #1b75bc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #1b75bc;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p,h1,h2,h3,h4,h5,h6{
+  display: inline;
+}
+
+div.highlight {
+  	margin: 1.6em 10px;
+	border-left: 10px solid #1b75bc;
+
+	pre {
+		font-size: 1em;
+		font-family: monospace;
+	}
+}
+
+/*article.post, article.post * {
+	outline: 1px solid #000;
+}*/
+
+article.post{
+	p {
+		font-size: 1.1em;
+	}
+
+	header h1 {
+		font-size: 2.4em;
+	}
+
+	p>code {
+		padding: 0.2em 0.4em;
+		border-left: 10px solid #1b75bc;
+		background: #f2f2f2;
+		font-family: monospace;
+	}
 }

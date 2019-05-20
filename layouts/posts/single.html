@@ -1,14 +1,16 @@
 {{ define "main" }}
 
-<div class="article-meta">
-<h1><span class="title">{{ .Title | markdownify }}</span></h1>
-<p>Made by hagstofa with love</p>
-{{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
-{{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
-</div>
-
 <main>
-{{ .Content }}
+	<article class="post">
+		<header>
+			<h1>{{ .Title | markdownify }}</h1><hr>
+			<div>
+				{{ with .Params.author }}<h4 class="author">{{ . }}</h4>{{ end }}
+				{{ if (gt .Params.date 0) }}<p class="date">{{ .Date.Format "2006/01/02" }}</p>{{ end }}
+			</div>
+		</header>
+		{{ .Content }}		
+	</article>
 </main>
 
 {{ partial "footer.html" . }}
