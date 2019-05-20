@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+{{if not .IsHome }}
+<h1>{{ .Title | markdownify }}</h1>
+{{ end }}
+
+{{ .Content }}
+
+  {{ range first 1 .Data.Pages }}
+	  <div class="article-wrapper">
+		<article>
+			<div class="title-parent">
+				<div class="title"><h4 class="date">{{ .Date.Format "2. January" }}</h4><h3>{{ .Title | markdownify }}</h3><h4 class="link"><a href="{{ .RelPermalink }}">Read article</a></h4>
+				</div>
+			</div>
+			<div class="image-parent">
+	      {{ $img := (.Resources.ByType "image").GetMatch .Params.featured_image }}
+				{{ with $img.Fill "672x320" }}
+					<div class="image" style="background-image: url({{ .Permalink }})" alt="{{ $.Title }}"></div>
+				{{ end }}
+			</div>
+		</article>
+		</div>
+  {{ end }}
+
+  {{ range after 1 (where .Data.Pages "Section" "!=" "") }}
+  <div class="article-wrapper medium">
+	<article>
+		<div class="title-parent">
+			<div class="title">
+				<h4 class="date">{{ .Date.Format "2. January" }}</h4>
+				<h3>{{ .Title | markdownify }}</h3>
+				<h4 class="link"><a href="{{ .RelPermalink }}">Read article</a></h4>
+			</div>
+		</div>
+		<div class="image-parent">
+      {{ $img := (.Resources.ByType "image").GetMatch .Params.featured_image }}
+			{{ with $img.Fill "200x150" }}
+				<div class="image" style="background-image: url({{ .Permalink }})" alt="{{ $.Title }}"></div>
+			{{ end }}
+		</div>
+	</article>
+	</div>
+  {{ end }}
+
+{{ partial "footer.html" . }}
+
+{{end}}
