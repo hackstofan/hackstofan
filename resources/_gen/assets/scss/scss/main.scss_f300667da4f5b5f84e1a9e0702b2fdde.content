@@ -533,7 +533,7 @@ nav.main {
     width: calc(50% - 0.8em); }
     .article-wrapper.medium:hover {
       height: 10em;
-      width: 49.999%;
+      width: 49.99%;
       margin: calc(0.8em - 0.4em) 0 -0.4em 0;
       cursor: pointer; }
     .article-wrapper.medium .title-parent {
