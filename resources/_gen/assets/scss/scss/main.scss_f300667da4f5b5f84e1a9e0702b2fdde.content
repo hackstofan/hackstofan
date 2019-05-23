@@ -488,7 +488,8 @@ nav.main {
     align-items: center;
     justify-content: center;
     text-align: left; }
-    nav.main .brand img {
+    nav.main .brand .logo > svg {
+      width: auto;
       max-height: 4em; }
     nav.main .brand .text h4 {
       margin: 0; }
@@ -512,7 +513,7 @@ nav.main {
         text-align: right; } }
   @media screen and (min-width: 48em) {
     nav.main ul.links {
-      flex-direction: row;
+      flex-direction: row-reverse;
       justify-content: right;
       align-items: flex-start;
       font-size: 1.1em; } }
@@ -601,7 +602,7 @@ nav.main {
 blockquote {
   background: #f2f2f2;
   border-left: 10px solid #1b75bc;
-  margin: 1.5em 10px;
+  margin: 0.8em 0;
   padding: 0.5em 10px;
   quotes: "“" "”" "‘" "’"; }
 
@@ -616,7 +617,7 @@ blockquote p, h1, h2, h3, h4, h5, h6 {
   display: inline; }
 
 div.highlight {
-  margin: 1.6em 10px;
+  margin: 0.8em 0;
   border-left: 10px solid #1b75bc; }
   div.highlight pre {
     font-size: 1em;
