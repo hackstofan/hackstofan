@@ -1,12 +1,10 @@
 ---
 title: "Hvernig þú getur skrifað greinar fyrir Hackstofuna."
 date: 2019-03-10T04:05:57Z
-author: "Hermann Björgvin"
 draft: true
 featured_image: images/developers.jpg
-tags:
-- Development
-- Go
+authors:
+  - hermannh
 ---
 
 ##### Viltu verða penni?

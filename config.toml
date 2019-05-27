@@ -1,3 +1,6 @@
 baseURL = "https://hackstofa.is/"
 languageCode = "en-us"
 title = "Hackstofa Íslands"
+[taxonomies]
+  author="authors"
+disableKinds = ["author"]

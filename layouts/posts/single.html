@@ -5,9 +5,19 @@
 		<header>
 			<h1>{{ .Title | markdownify }}</h1><hr>
 			<div>
-				{{ with .Params.author }}<h4 class="author">{{ . }}</h4>{{ end }}
 				{{ if (gt .Params.date 0) }}<p class="date">{{ .Date.Format "2006/01/02" }}</p>{{ end }}
 			</div>
+
+			{{- range .Params.authors }}
+			  {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+			    <figure>
+			      <img src="{{ .Params.photo }}" alt=""/>
+			      <figcaption>
+			        <a href="{{ .Permalink }}">{{ .Params.name }}</a>
+			      </figcaption>
+			    </figure>
+			  {{ end }}
+			{{ end }}
 		</header>
 		{{ .Content }}		
 	</article>

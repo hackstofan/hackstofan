@@ -6,6 +6,7 @@
     <title>{{ .Title }} | {{ .Site.Title }}</title>
 
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lato:400,700" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     {{ $sass := resources.Get "scss/main.scss" }}
     {{ $style := $sass | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
